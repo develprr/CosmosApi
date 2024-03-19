@@ -8,7 +8,7 @@ The aim is to aid getting started with MongoDB development in Cosmos DB.
 
 The project uses .NET core and C# programming language to interact with MongoDB in Cosmos DB. 
 There's an accompanied Bicep file to help configure a MongoDB instance in Azure cloud.
-Please further read to find the Azure CLI commands
+Please read further to find the Azure CLI commands
 to create the database in Azure from the Bicep configuration file. 
 
 The project also contains a small program implemented in C# language to add a product into "products" collection. 
