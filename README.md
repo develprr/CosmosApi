@@ -18,7 +18,7 @@ This project is strictly based on following tutorials:
 * .NET 8.0 [Install .NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * Linux operating system (either a native Linux or a Linux subsystem in WSL2 on Windows)
 
-## Installation
+## Instructions
 
 ### Deploy a resource group
 First, create resource group to serve as the basement for your MongoDb in Cosmos DB:
@@ -32,4 +32,10 @@ Then, create a MongoDB instance in Cosmos DB with some collections, "products" a
 
 ```
 az deployment group create --resource-group exampleRG --template-file 'main.bicep' --parameters main
+```
+
+### Clean up
+To remove the resource grup from Azure (and your MongoDB within):
+```
+az group delete --name exampleRG
 ```
