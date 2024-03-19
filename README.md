@@ -11,6 +11,7 @@ This project is strictly based on following tutorials:
 * [Quickstart: Create an Azure Cosmos DB for MongoDB vCore cluster by using a Bicep template](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/vcore/quickstart-bicep?tabs=azure-cli)
 * [Manage Azure Cosmos DB for MongoDB resources using Bicep](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/manage-with-bicep#api-for-mongodb-with-autoscale-provisioned-throughput)
 * [Generate Bicep parameter file](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-cli#generate-params)
+* [How to list Azure resources](https://learn.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az-group-list)
 ## Prerequisites
 
 * An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/en-us/free/)
@@ -20,18 +21,26 @@ This project is strictly based on following tutorials:
 
 ## Instructions
 
-### Deploy a resource group
-First, create resource group to serve as the basement for your MongoDb in Cosmos DB:
+### Create a resource group
+First, create resource group in Azure to serve as the basement for your MongoDb in Cosmos DB:
 ```
 az group create \
     --name exampleRG \
     --location eastus
 ```
+
+### Verify the resource group
+To be sure that you successfully created a resource group, type:
+```
+az group list
+```
+The group that you created should be listed now in the output.
+
 ### Create a MongoDB in Cosmos DB
 Then, create a MongoDB instance in Cosmos DB with some collections, "products" and "customers":
 
 ```
-az deployment group create --resource-group exampleRG --template-file 'main.bicep' --parameters main
+az deployment group create --resource-group exampleRG --template-file 'main.bicep' --parameters main.parameters.json
 ```
 
 ### Clean up
