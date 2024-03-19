@@ -132,7 +132,7 @@ resource collection1 'Microsoft.DocumentDb/databaseAccounts/mongodbDatabases/col
     resource: {
       id: collection1Name
       shardKey: {
-        user_id: 'Hash'
+        CustomerId: 'Hash'
       }
       indexes: [
         {
@@ -152,8 +152,8 @@ resource collection1 'Microsoft.DocumentDb/databaseAccounts/mongodbDatabases/col
         {
           key: {
             keys: [
-              'product_name'
-              'product_category_name'
+              'ProductName'
+              'ProductCategoryName'
             ]
           }
         }
@@ -169,7 +169,7 @@ resource collection2 'Microsoft.DocumentDb/databaseAccounts/mongodbDatabases/col
     resource: {
       id: collection2Name
       shardKey: {
-        company_id: 'Hash'
+        CompanyId: 'Hash'
       }
       indexes: [
         {
@@ -189,8 +189,8 @@ resource collection2 'Microsoft.DocumentDb/databaseAccounts/mongodbDatabases/col
         {
           key: {
             keys: [
-              'customer_id'
-              'order_id'
+              'CustomerId'
+              'OrderId'
             ]
           }
         }

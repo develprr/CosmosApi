@@ -13,6 +13,7 @@ Connector.Run();
 
 public record Product(
     string Id,
+    string UserId,
     string Category,
     string Name,
     int Quantity,
@@ -24,11 +25,12 @@ public class Connector
     public static void Run()
     {
         var client = new MongoClient(Environment.GetEnvironmentVariable("COSMOS_CONNECTION_STRING"));
-        var db = client.GetDatabase("adventure");
+        var db = client.GetDatabase("store");
 
         var _products = db.GetCollection<Product>("products");
 
         _products.InsertOne(new Product(
+            Guid.NewGuid().ToString(),
             Guid.NewGuid().ToString(),
             "gear-surf-surfboards",
             "Yamba Surfboard", 
