@@ -13,7 +13,7 @@ Connector.Run();
 
 public record Product(
     string Id,
-    string UserId,
+    string CustomerId,
     string Category,
     string Name,
     int Quantity,
