@@ -16,7 +16,7 @@ Running the program the user can verify that they actually
 can connect to the MongoDB in Cosmos DB and interact with it.
 
 ## Background
-This project is strictly based on following tutorials:
+This project is strictly based on the following tutorials:
 
 * [Quickstart: Azure Cosmos DB for MongoDB for .NET with the MongoDB driver](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/quickstart-dotnet?tabs=azure-cli%2Cwindows)
 * [Quickstart: Create an Azure Cosmos DB and a container using Bicep](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-template-bicep?tabs=CLI)
