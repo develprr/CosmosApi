@@ -1,15 +1,8 @@
-﻿using System;
-using MongoDB.Driver;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Driver;
 using Newtonsoft.Json;
 
-
-// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Cosmos API Connector PoC");
 Connector.Run();
-
-// New instance of CosmosClient class
 
 public record Product(
     string Id,
@@ -41,4 +34,3 @@ public class Connector
         Console.WriteLine(JsonConvert.SerializeObject(createdProducts.ToList(), Formatting.Indented));
     }
 }
-
