@@ -10,7 +10,7 @@ This project is strictly based on following tutorials:
 * [Quickstart: Create an Azure Cosmos DB and a container using Bicep](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-template-bicep?tabs=CLI)
 * [Quickstart: Create an Azure Cosmos DB for MongoDB vCore cluster by using a Bicep template](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/vcore/quickstart-bicep?tabs=azure-cli)
 * [Manage Azure Cosmos DB for MongoDB resources using Bicep](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/manage-with-bicep#api-for-mongodb-with-autoscale-provisioned-throughput)
-* [Generate Bicep parameter file]https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-cli#generate-params
+* [Generate Bicep parameter file](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-cli#generate-params)
 ## Prerequisites
 
 * An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/en-us/free/)
