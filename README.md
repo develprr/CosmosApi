@@ -10,7 +10,7 @@ This project is strictly based on following tutorials:
 * [Quickstart: Create an Azure Cosmos DB and a container using Bicep](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-template-bicep?tabs=CLI)
 * [Quickstart: Create an Azure Cosmos DB for MongoDB vCore cluster by using a Bicep template](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/vcore/quickstart-bicep?tabs=azure-cli)
 * [Manage Azure Cosmos DB for MongoDB resources using Bicep](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/manage-with-bicep#api-for-mongodb-with-autoscale-provisioned-throughput)
-
+* [Generate Bicep parameter file]https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-cli#generate-params
 ## Prerequisites
 
 * An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/en-us/free/)
@@ -20,26 +20,16 @@ This project is strictly based on following tutorials:
 
 ## Installation
 
-### Create Mongo database
-Create a Mongo database account in CosmosDB by running following commands:
+### Deploy a resource group
+First, create resource group to serve as the basement for your MongoDb in Cosmos DB:
 ```
-az group create --name exampleRG --location eastus
-az deployment group create --resource-group exampleRG --template-file main.bicep --parameters primaryRegion=useast secondaryRegion=uswest
+az group create \
+    --name exampleRG \
+    --location eastus
 ```
-### Validate the deployment
-Make sure that the deploment was successful, list the created reasources:
-```
-az resource list --resource-group exampleRG
-```
+### Create a MongoDB in Cosmos DB
+Then, create a MongoDB instance in Cosmos DB with some collections, "products" and "customers":
 
-## Find the created account
-You need the account name of the MongoDB account that you just created. To find it,
-run the following command: 
 ```
-az resource list --resource-group exampleRG | egrep "name"
-```
-
-## Find the connection string for the created MongoDB instance:
-```
-az cosmosdb keys list --type connection-strings --resource-group exampleRG --name <account-name>
+az deployment group create --resource-group exampleRG --template-file 'main.bicep' --parameters main
 ```
