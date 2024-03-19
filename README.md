@@ -1,10 +1,16 @@
 # CosmosApi
 
 ## Description
-This is an example API to demonstrate how to use .NET core and C# programming language
-to interact with MongoDB in Cosmos DB. The project contains a Bicep file to configure
-a MongoDB instance in Azure cloud. The project's README.md file explains the Azure CLI commands
+This is a minimal implementation of a project that allows to configure a MongoDB instance in Cosmos DB
+and do some basic interaction with it over MongoDB.Driver API.
+
+The aim is to aid getting started with MongoDB development in Cosmos DB.
+
+The project uses .NET core and C# programming language to interact with MongoDB in Cosmos DB. 
+There's an accompanied Bicep file to help configure a MongoDB instance in Azure cloud.
+Please further read to find the Azure CLI commands
 to create the database in Azure from the Bicep configuration file. 
+
 The project also contains a Program implemented in C# language to add a product into products collection. 
 Running the program the user can verify that they actually
 can connect to the MongoDB in Cosmos DB and interact with it.
