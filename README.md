@@ -11,7 +11,7 @@ There's an accompanied Bicep file to help configure a MongoDB instance in Azure 
 Please further read to find the Azure CLI commands
 to create the database in Azure from the Bicep configuration file. 
 
-The project also contains a small program implemented in C# language to add a product into products collection. 
+The project also contains a small program implemented in C# language to add a product into "products" collection. 
 Running the program the user can verify that they actually
 can connect to the MongoDB in Cosmos DB and interact with it.
 
